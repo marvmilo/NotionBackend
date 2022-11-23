@@ -1,0 +1,12 @@
+[Unit]
+Description=notionbackend
+After=multi-user.target
+
+[Service]
+Type=simple
+WorkingDirectory=/home/pi/notionbackend
+ExecStart=/home/pi/notionbackend/env/bin/python3 /home/pi/notionbackend/__main__.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
