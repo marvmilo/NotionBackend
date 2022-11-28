@@ -2,9 +2,11 @@ import os
 import datetime as dt
 from notion_client import Client
 
+todo_database_id = "08ca089e-8b53-4804-9632-4fc0c91ad58c"
+
 def function():
     notion = Client(auth=os.environ["NOTION_TOKEN"])
-    todo_database = notion.databases.query(database_id="25f492da-5bba-4306-9d53-f1e2e5b009d3")
+    todo_database = notion.databases.query(database_id=todo_database_id)
     for page in todo_database["results"]:
         try:
             interval = page["properties"]["Wiederholungs Interval"]["number"]
