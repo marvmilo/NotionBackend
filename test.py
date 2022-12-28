@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
 load_dotenv()
 
-from update_reccuring_tasks import function
+from delete_old_tasks import function
 function()

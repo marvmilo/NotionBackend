@@ -4,8 +4,8 @@ After=multi-user.target
 
 [Service]
 Type=simple
-WorkingDirectory=/home/pi/notionbackend
-ExecStart=/home/pi/notionbackend/env/bin/python3 /home/pi/notionbackend/__main__.py
+WorkingDirectory=/home/pi/NotionBackend
+ExecStart=/home/pi/NotionBackend/env/bin/python __main__.py
 Restart=always
 
 [Install]
